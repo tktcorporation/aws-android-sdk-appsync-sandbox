@@ -18,6 +18,7 @@ import org.junit.runner.RunWith
 
 import org.junit.Assert.*
 import type.CreateUpperCamelCaseLogInput
+import type.ModelFloatKeyConditionInput
 import java.util.*
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
@@ -67,6 +68,19 @@ class UpperCamelCaseUpperCamelCaseLogTest {
         val log = list.first()
 
         val result = get(log.Kind(), log.TimestampMs())
+
+        assertNotNull(result)
+        assertEquals(result!!.Content(), "sample")
+        assertEquals(result.Kind(), "kind")
+    }
+
+    @Test
+    fun getByListTest() = runBlocking {
+        val list = list()
+        assert(list.count() > 0)
+        val log = list.first()
+
+        val result = getByList(log.Kind(), log.TimestampMs())
 
         assertNotNull(result)
         assertEquals(result!!.Content(), "sample")
@@ -144,6 +158,31 @@ class UpperCamelCaseUpperCamelCaseLogTest {
                     }
                     val result = response.data()!!.upperCamelCaseLog
                     continuation.resume(result)
+                }
+            })
+        }
+    }
+
+    private suspend fun getByList(kind: String, timestampMs: Double) : ListUpperCamelCaseLogsQuery.Item? {
+        val filter = ListUpperCamelCaseLogsQuery
+            .builder()
+            .kind(kind)
+            .timestampMs(ModelFloatKeyConditionInput.builder().eq(timestampMs).build())
+            .build()
+        return suspendCoroutine { continuation ->
+            client.query(filter).responseFetcher(NETWORK_FIRST).enqueue(object :
+                GraphQLCall.Callback<ListUpperCamelCaseLogsQuery.Data>() {
+                override fun onFailure(e: ApolloException) {
+                    throw e
+                }
+
+                override fun onResponse(response: Response<ListUpperCamelCaseLogsQuery.Data>) {
+                    if (response.errors().size > 0) {
+                        continuation.resumeWithException(Exception(response.errors().toString()))
+                        return
+                    }
+                    val result = response.data()!!.listUpperCamelCaseLogs()!!.items()!!
+                    continuation.resume(result.firstOrNull())
                 }
             })
         }
