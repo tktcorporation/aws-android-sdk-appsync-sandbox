@@ -175,7 +175,6 @@ query ListLogs(
 }
 query GetUpperCamelCaseLog($Kind: String!, $TimestampMs: Float!) {
   getUpperCamelCaseLog(Kind: $Kind, TimestampMs: $TimestampMs) {
-    Id
     Kind
     TimestampMs
     Content
@@ -200,7 +199,6 @@ query ListUpperCamelCaseLogs(
     sortDirection: $sortDirection
   ) {
     items {
-      Id
       Kind
       TimestampMs
       Content

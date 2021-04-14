@@ -283,7 +283,6 @@ mutation CreateUpperCamelCaseLog(
   $condition: ModelUpperCamelCaseLogConditionInput
 ) {
   createUpperCamelCaseLog(input: $input, condition: $condition) {
-    Id
     Kind
     TimestampMs
     Content
@@ -296,7 +295,6 @@ mutation UpdateUpperCamelCaseLog(
   $condition: ModelUpperCamelCaseLogConditionInput
 ) {
   updateUpperCamelCaseLog(input: $input, condition: $condition) {
-    Id
     Kind
     TimestampMs
     Content
@@ -309,7 +307,6 @@ mutation DeleteUpperCamelCaseLog(
   $condition: ModelUpperCamelCaseLogConditionInput
 ) {
   deleteUpperCamelCaseLog(input: $input, condition: $condition) {
-    Id
     Kind
     TimestampMs
     Content

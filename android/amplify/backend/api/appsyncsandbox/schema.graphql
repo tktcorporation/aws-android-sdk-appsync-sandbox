@@ -27,7 +27,6 @@ type Log @model @key(fields: ["kind", "timestampMs"]) {
 }
 
 type UpperCamelCaseLog @model @key(fields: ["Kind", "TimestampMs"]) {
-  Id: ID!
   Kind: String!
   TimestampMs: Float!
   Content: String!

@@ -244,7 +244,6 @@ subscription OnDeleteLog {
 }
 subscription OnCreateUpperCamelCaseLog {
   onCreateUpperCamelCaseLog {
-    Id
     Kind
     TimestampMs
     Content
@@ -254,7 +253,6 @@ subscription OnCreateUpperCamelCaseLog {
 }
 subscription OnUpdateUpperCamelCaseLog {
   onUpdateUpperCamelCaseLog {
-    Id
     Kind
     TimestampMs
     Content
@@ -264,7 +262,6 @@ subscription OnUpdateUpperCamelCaseLog {
 }
 subscription OnDeleteUpperCamelCaseLog {
   onDeleteUpperCamelCaseLog {
-    Id
     Kind
     TimestampMs
     Content

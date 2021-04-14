@@ -2235,22 +2235,6 @@
                 "description": null,
                 "fields": [
                     {
-                        "name": "Id",
-                        "description": null,
-                        "args": [],
-                        "type": {
-                            "kind": "NON_NULL",
-                            "name": null,
-                            "ofType": {
-                                "kind": "SCALAR",
-                                "name": "ID",
-                                "ofType": null
-                            }
-                        },
-                        "isDeprecated": false,
-                        "deprecationReason": null
-                    },
-                    {
                         "name": "Kind",
                         "description": null,
                         "args": [],
@@ -2342,16 +2326,6 @@
                 "description": null,
                 "fields": null,
                 "inputFields": [
-                    {
-                        "name": "Id",
-                        "description": null,
-                        "type": {
-                            "kind": "INPUT_OBJECT",
-                            "name": "ModelIDInput",
-                            "ofType": null
-                        },
-                        "defaultValue": null
-                    },
                     {
                         "name": "Kind",
                         "description": null,
@@ -3763,20 +3737,6 @@
                         "defaultValue": null
                     },
                     {
-                        "name": "Id",
-                        "description": null,
-                        "type": {
-                            "kind": "NON_NULL",
-                            "name": null,
-                            "ofType": {
-                                "kind": "SCALAR",
-                                "name": "ID",
-                                "ofType": null
-                            }
-                        },
-                        "defaultValue": null
-                    },
-                    {
                         "name": "Kind",
                         "description": null,
                         "type": {
@@ -3829,16 +3789,6 @@
                 "description": null,
                 "fields": null,
                 "inputFields": [
-                    {
-                        "name": "Id",
-                        "description": null,
-                        "type": {
-                            "kind": "INPUT_OBJECT",
-                            "name": "ModelIDInput",
-                            "ofType": null
-                        },
-                        "defaultValue": null
-                    },
                     {
                         "name": "Content",
                         "description": null,
@@ -3898,16 +3848,6 @@
                 "description": null,
                 "fields": null,
                 "inputFields": [
-                    {
-                        "name": "Id",
-                        "description": null,
-                        "type": {
-                            "kind": "SCALAR",
-                            "name": "ID",
-                            "ofType": null
-                        },
-                        "defaultValue": null
-                    },
                     {
                         "name": "Kind",
                         "description": null,
