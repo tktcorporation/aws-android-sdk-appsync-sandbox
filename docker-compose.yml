@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  amplify:
+    # entrypoint: ["/bin/bash", "-c", "amplify"]
+    build: .
+    container_name: work
+    restart: always
+    working_dir: /usr/src/
+    tty: true
+    volumes:
+      - ./android:/usr/src/
