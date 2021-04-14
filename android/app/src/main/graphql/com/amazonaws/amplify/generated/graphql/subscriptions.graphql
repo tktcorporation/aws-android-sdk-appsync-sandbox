@@ -242,3 +242,33 @@ subscription OnDeleteLog {
     updatedAt
   }
 }
+subscription OnCreateUpperCamelCaseLog {
+  onCreateUpperCamelCaseLog {
+    Id
+    Kind
+    TimestampMs
+    Content
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateUpperCamelCaseLog {
+  onUpdateUpperCamelCaseLog {
+    Id
+    Kind
+    TimestampMs
+    Content
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteUpperCamelCaseLog {
+  onDeleteUpperCamelCaseLog {
+    Id
+    Kind
+    TimestampMs
+    Content
+    createdAt
+    updatedAt
+  }
+}

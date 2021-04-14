@@ -173,3 +173,40 @@ query ListLogs(
     nextToken
   }
 }
+query GetUpperCamelCaseLog($Kind: String!, $TimestampMs: Float!) {
+  getUpperCamelCaseLog(Kind: $Kind, TimestampMs: $TimestampMs) {
+    Id
+    Kind
+    TimestampMs
+    Content
+    createdAt
+    updatedAt
+  }
+}
+query ListUpperCamelCaseLogs(
+  $Kind: String
+  $TimestampMs: ModelFloatKeyConditionInput
+  $filter: ModelUpperCamelCaseLogFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listUpperCamelCaseLogs(
+    Kind: $Kind
+    TimestampMs: $TimestampMs
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      Id
+      Kind
+      TimestampMs
+      Content
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}

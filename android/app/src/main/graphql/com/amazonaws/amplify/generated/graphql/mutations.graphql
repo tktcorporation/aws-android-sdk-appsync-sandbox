@@ -278,3 +278,42 @@ mutation DeleteLog(
     updatedAt
   }
 }
+mutation CreateUpperCamelCaseLog(
+  $input: CreateUpperCamelCaseLogInput!
+  $condition: ModelUpperCamelCaseLogConditionInput
+) {
+  createUpperCamelCaseLog(input: $input, condition: $condition) {
+    Id
+    Kind
+    TimestampMs
+    Content
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateUpperCamelCaseLog(
+  $input: UpdateUpperCamelCaseLogInput!
+  $condition: ModelUpperCamelCaseLogConditionInput
+) {
+  updateUpperCamelCaseLog(input: $input, condition: $condition) {
+    Id
+    Kind
+    TimestampMs
+    Content
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteUpperCamelCaseLog(
+  $input: DeleteUpperCamelCaseLogInput!
+  $condition: ModelUpperCamelCaseLogConditionInput
+) {
+  deleteUpperCamelCaseLog(input: $input, condition: $condition) {
+    Id
+    Kind
+    TimestampMs
+    Content
+    createdAt
+    updatedAt
+  }
+}

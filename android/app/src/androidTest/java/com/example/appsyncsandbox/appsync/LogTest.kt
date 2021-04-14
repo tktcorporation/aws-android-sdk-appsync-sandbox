@@ -1,4 +1,4 @@
-package com.example.appsyncsandbox
+package com.example.appsyncsandbox.appsync
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -12,7 +12,6 @@ import com.apollographql.apollo.GraphQLCall
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert
 
 import org.junit.Test
 import org.junit.runner.RunWith
