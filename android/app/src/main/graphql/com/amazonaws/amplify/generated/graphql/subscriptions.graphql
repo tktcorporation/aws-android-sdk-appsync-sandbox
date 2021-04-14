@@ -212,3 +212,33 @@ subscription OnDeleteComment {
     updatedAt
   }
 }
+subscription OnCreateLog {
+  onCreateLog {
+    id
+    kind
+    timestampMs
+    content
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateLog {
+  onUpdateLog {
+    id
+    kind
+    timestampMs
+    content
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteLog {
+  onDeleteLog {
+    id
+    kind
+    timestampMs
+    content
+    createdAt
+    updatedAt
+  }
+}

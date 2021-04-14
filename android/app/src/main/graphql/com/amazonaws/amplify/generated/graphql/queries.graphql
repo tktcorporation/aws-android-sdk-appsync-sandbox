@@ -136,3 +136,40 @@ query ListComments(
     nextToken
   }
 }
+query GetLog($kind: String!, $timestampMs: Float!) {
+  getLog(kind: $kind, timestampMs: $timestampMs) {
+    id
+    kind
+    timestampMs
+    content
+    createdAt
+    updatedAt
+  }
+}
+query ListLogs(
+  $kind: String
+  $timestampMs: ModelFloatKeyConditionInput
+  $filter: ModelLogFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listLogs(
+    kind: $kind
+    timestampMs: $timestampMs
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      id
+      kind
+      timestampMs
+      content
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
