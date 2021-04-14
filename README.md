@@ -1,11 +1,5 @@
-# .github
+# aws-android-sdk-appsync-sandbox
 
-## Github Repository Template
+## What for
 
-Generate your repository by this.
-
-## Actions
-
-- https://github.com/github/codeql-action
-- https://github.com/tkt-actions/add-issue-links
-- https://github.com/actions/labeler
+- To isolate the conditions under which an error occurs.
